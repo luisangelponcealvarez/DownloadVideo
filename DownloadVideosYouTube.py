@@ -42,12 +42,22 @@ path_entry = tk.Entry(window, width=50)
 path_entry.pack()
 
 # Botón para seleccionar la ubicación de descarga
-browse_button = tk.Button(window, text="Buscar", command=browse_button)
+browse_button = tk.Button(window, padx=30, pady=2, text="Buscar", command=browse_button)
 browse_button.pack()
 
 # Botón para iniciar la descarga
-download_button = tk.Button(window, text="Descargar", command=download_video)
+download_button = tk.Button(
+    window, padx=30, pady=2, text="Descargar", command=download_video
+)
 download_button.pack()
+
+# centrar los botones
+window.update()
+ancho_ventana = window.winfo_width()
+
+# colocar los botones uno al lado del otro
+browse_button.pack(side=tk.LEFT, padx=20)
+download_button.pack(side=tk.LEFT, padx=20)
 
 # Etiqueta de estado de descarga
 status_label = tk.Label(window, text="")
