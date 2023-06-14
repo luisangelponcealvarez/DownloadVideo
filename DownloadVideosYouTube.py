@@ -17,7 +17,7 @@ def download_video():
     try:
         # Descarga el video utilizando pytube
         yt = YouTube(video_url)
-        video = yt.streams.first()
+        video = yt.streams.get_highest_resolution()
         video.download(download_path)
         status_label.config(text="Descarga completada!")
     except Exception as e:
@@ -42,26 +42,28 @@ path_entry = tk.Entry(window, width=50)
 path_entry.pack()
 
 # Botón para seleccionar la ubicación de descarga
-browse_button = tk.Button(window, padx=30, pady=2, text="Buscar", command=browse_button)
+browse_button = tk.Button(window, text="Buscar", command=browse_button)
 browse_button.pack()
 
 # Botón para iniciar la descarga
-download_button = tk.Button(
-    window, padx=30, pady=2, text="Descargar", command=download_video
-)
+download_button = tk.Button(window, text="Descargar", command=download_video)
 download_button.pack()
 
-# centrar los botones
-window.update()
-ancho_ventana = window.winfo_width()
-
 # colocar los botones uno al lado del otro
-browse_button.pack(side=tk.LEFT, padx=20)
-download_button.pack(side=tk.LEFT, padx=20)
+espacio = 10
+
+browse_button.pack(side="top")
+browse_button.place(relx=0.4, rely=0.5, anchor="c")
+
+download_button.pack(side="top")
+download_button.place(relx=0.6, rely=0.5, anchor="c")
 
 # Etiqueta de estado de descarga
 status_label = tk.Label(window, text="")
 status_label.pack()
+# Centrando etiqueta de estado de descarga
+status_label.pack(side="top")
+status_label.place(relx=0.5, rely=0.6, anchor="c")
 
 # Inicia el bucle principal de la ventana
 window.mainloop()
