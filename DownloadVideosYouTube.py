@@ -1,67 +1,34 @@
 import tkinter as tk
-from tkinter import filedialog
 from pytube import YouTube
 
 
-def browse_button():
-    # Abre un diálogo para seleccionar la ubicación de guardado del video
-    download_path = filedialog.askdirectory()
-    path_entry.delete(0, tk.END)
-    path_entry.insert(tk.END, download_path)
-
-
-def download_video():
-    video_url = url_entry.get()
-    download_path = path_entry.get()
-
+def descargar_video():
+    url = url_entry.get()
     try:
-        # Descarga el video utilizando pytube
-        yt = YouTube(video_url)
-        video = yt.streams.first()
-        video.download(download_path)
-        status_label.config(text="Descarga completada!")
+        yt = YouTube(url)
+        video = yt.streams.get_highest_resolution()
+        video.download()
+        status_label.config(text="Descarga completa.")
     except Exception as e:
-        status_label.config(text="Error al descargar el video")
+        status_label.config(text=f"Error: {str(e)}")
 
 
-# Configuración de la ventana principal
-window = tk.Tk()
-window.title("Descargador de Videos")
-window.geometry("400x200")
+# Crear la ventana principal
+root = tk.Tk()
+root.title("Descargar Video de YouTube")
 
-# Etiqueta y campo de entrada para la URL del video
-url_label = tk.Label(window, text="URL del Video:")
+# Crear etiqueta y campo de entrada para la URL
+url_label = tk.Label(root, text="URL del video de YouTube:")
 url_label.pack()
-url_entry = tk.Entry(window, width=50)
+url_entry = tk.Entry(root, width=40)
 url_entry.pack()
 
-# Etiqueta y campo de entrada para la ubicación de descarga
-path_label = tk.Label(window, text="Ubicación de Descarga:")
-path_label.pack()
-path_entry = tk.Entry(window, width=50)
-path_entry.pack()
-
-# Botón para seleccionar la ubicación de descarga
-browse_button = tk.Button(window, padx=30, pady=2, text="Buscar", command=browse_button)
-browse_button.pack()
-
 # Botón para iniciar la descarga
-download_button = tk.Button(
-    window, padx=30, pady=2, text="Descargar", command=download_video
-)
+download_button = tk.Button(root, text="Descargar", command=descargar_video)
 download_button.pack()
 
-# centrar los botones
-window.update()
-ancho_ventana = window.winfo_width()
-
-# colocar los botones uno al lado del otro
-browse_button.pack(side=tk.LEFT, padx=20)
-download_button.pack(side=tk.LEFT, padx=20)
-
-# Etiqueta de estado de descarga
-status_label = tk.Label(window, text="")
+# Etiqueta para mostrar el estado de la descarga
+status_label = tk.Label(root, text="")
 status_label.pack()
 
-# Inicia el bucle principal de la ventana
-window.mainloop()
+root.mainloop()
