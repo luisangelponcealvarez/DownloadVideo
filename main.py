@@ -394,7 +394,6 @@ def AdvancedWindow():
         advWindow.maxsize(700, 460)
         advWindow.minsize(700, 460)
         if platform == "linux" or platform == "linux2": pass
-        else: advWindow.iconbitmap("YDICO.ico")
         advWindow.protocol("WM_DELETE_WINDOW", onClosing)
 
         # CRF slider function
@@ -1145,7 +1144,6 @@ def DownlaodWindow():
     newWindow.maxsize(700, 460)
     newWindow.minsize(700, 460)
     if platform == "linux" or platform == "linux2": pass
-    else: newWindow.iconbitmap("YDICO.ico")
     newWindow.protocol("WM_DELETE_WINDOW", onClosing)
     # newWindow.bind("<Return>", VideoDownloader)
 
@@ -1819,7 +1817,6 @@ def PlaylistWindow():
     pWindow.maxsize(700, 460)
     pWindow.minsize(700, 460)
     if platform == "linux" or platform == "linux2": pass
-    else: pWindow.iconbitmap("YDICO.ico")
     pWindow.protocol("WM_DELETE_WINDOW", onClosing)
     # pWindow.bind("<Return>", PlaylistDownloader)
 
@@ -1991,7 +1988,6 @@ def SearchWindow():
     sWindow.maxsize(700, 460)
     sWindow.minsize(700, 460)
     if platform == "linux" or platform == "linux2": pass
-    else: sWindow.iconbitmap("YDICO.ico")
     sWindow.withdraw()
     sWindow.protocol("WM_DELETE_WINDOW", onClosing)
     global to_download
@@ -2900,7 +2896,6 @@ def SearchWindow():
             root.destroy()
         sDWindow.protocol("WM_DELETE_WINDOW", onClosing)
         if platform == "linux" or platform == "linux2": pass
-        else: sDWindow.iconbitmap("YDICO.ico")
         # sDWindow.bind("<Return>", SearchDownloader)
 
         # Downloading label
