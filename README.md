@@ -1,38 +1,57 @@
-# DownloadVideo
+# YouTube Downloader
 
-Este proyecto lo hice practicar python con la api de youtube este proyecto sirve para descargar videos desde youtube
+Descargador de YouTube sencillo y moderno para descargar vídeos, listas de reproducción, subtítulos y consultas de búsqueda.
 
-## Usage 🚀
+## Características
 
-~ Descarga y installa python en tu computadora
+  <li>🔗 Descarga vídeos por URL.</li>
 
-```
-https://www.python.org/
-```
+  <li>🗒️ Descarga listas de reproducción. Con opción de seleccionar qué vídeos descargar.</li>
 
-~ Clona el repositorio
+  <li>💬 Descarga los subtítulos adjuntos. O tradúcelo a tu idioma preferido.</li>
+  
+  <li>🔎 Busca palabras clave y descarga vídeos de los resultados de la búsqueda.</li>
+
+  <li>🔉 Descargar sólo audio</li>
+
+  <li>🔖 Calidades seleccionables.</li>
+
+  <li>⚙️ Ajustes avanzados de calidad. (Cambiar formato, códec, bitrate, etc...)</li>
+
+  <li>🖼️ Descarga miniaturas.</li>
+
+  <li>⏯️ Admite reanudación.</li>
+
+  <li>📂 Cambia la ruta de descarga.</li>
+
+  <li>🌄 Interfaz gráfica de usuario sencilla y moderna.</li>
+
+  <li>🌃 Personaliza el tema y el color por defecto.</li>
+
+## Instalación / Getting started
+
+Aquí cuenta un poco que sucede realmente cuando ejecuta el código anterior.
+
+~ Instala [python](https://www.python.org/downloads/) y [git](https://git-scm.com/downloads) y añádelos a la ruta
+
+~ Git-clone este repositorio
 
 ```
 git clone https://github.com/luisangelponcealvarez/DownloadVideo.git
 ```
 
-~ Instala los paquetes nesesarios
-
-- la libreria tkinter sirve para hacer la ventana
-  ```
-  pip install tkinter
-  ```
-- la libreria pythube sirve para la api de youtube para sacar los videos
-  ```
-  pip install pytube
-  ```
-
-~ Para ejecutar el programa ejecuta el siguiente comando
+~ Install modules using pip
 
 ```
-py DownloadVideosYouTube.py
+pip install -r requirements.txt
+```
+
+~ Ejecute el archivo .py
+
+```
+py main.py
 ```
 
 ## Miniatura
 
-![Miniatura](./miniatura.png)
+![miniatura](./Img/Captura%20de%20pantalla%202023-10-12%20205432.png)
