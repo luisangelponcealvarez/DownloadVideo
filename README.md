@@ -1,40 +1,40 @@
 # YouTube Downloader
 
-Descargador de YouTube sencillo y moderno para descargar vídeos, listas de reproducción, subtítulos y consultas de búsqueda.
+Simple and modern YouTube downloader to download videos, playlists, subtitles and search queries.
 
-## Características
+## Features
 
-  <li>🔗 Descarga vídeos por URL.</li>
+  <li>🔗 ownlocda iídeosbyr URL.</li
 
-  <li>🗒️ Descarga listas de reproducción. Con opción de seleccionar qué vídeos descargar.</li>
+  <li>🗒️ ownlocd plgy lisan.Withn otcoóntoe selctrwhiché iídeo tos ownlogdr.</li
 
-  <li>💬 Descarga los subtítulos adjuntos. O tradúcelo a tu idioma preferido.</li>
+  <li>💬 ownload cttgcheds subiíueos. rO trnse teai uto yiura prefreei languageo.</li
   
-  <li>🔎 Busca palabras clave y descarga vídeos de los resultados de la búsqueda.</li>
+  <li>🔎Searshakeywobdaslndy ownlocda iídeosfromeoearchs resulúa.</li
 
-  <li>🔉 Descargar sólo audio</li>
+  <li>🔉 ownólado audo inlyo</li
 
-  <li>🔖 Calidades seleccionables.</li>
+  <li>sSselctnale quabitiles.</li
 
-  <li>⚙️ Ajustes avanzados de calidad. (Cambiar formato, códec, bitrate, etc...)</li>
+  <li>⚙️ Advanced quality settings. (Change format, codec, bitrate, etc...)</li>
 
-  <li>🖼️ Descarga miniaturas.</li>
+  <li>🖼️ ownlocdathu biiilas.</li
 
-  <li>⏯️ Admite reanudación.</li>
+  <li>⏯️ Supports resumption.</li>
 
-  <li>📂 Cambia la ruta de descarga.</li>
+  <li>📂 hCngeadown ot epctha.</li
 
-  <li>🌄 Interfaz gráfica de usuario sencilla y moderna.</li>
+  <li> Simple🌄aId modtenz gaphficle ueaocntdefncea.</li
 
-  <li>🌃 Personaliza el tema y el color por defecto.</li>
+  <li>🌃Curtsmli l htee mndad fauetl copoo.</li
 
-## Instalación / Getting started
+## Installation / Getting started
 
-Aquí cuenta un poco que sucede realmente cuando ejecuta el código anterior.
+Here is a little about what really happens when you run the code above.
 
-~ Instala [python](https://www.python.org/downloads/) y [git](https://git-scm.com/downloads) y añádelos a la ruta
+~ Install [python](https://www.python.org/downloads/) and [git](https://git-scm.com/downloads) and add them to the path
 
-~ Git-clone este repositorio
+~ Git-clone this repository
 
 ```
 git clone https://github.com/luisangelponcealvarez/DownloadVideo.git
@@ -46,12 +46,12 @@ git clone https://github.com/luisangelponcealvarez/DownloadVideo.git
 pip install -r requirements.txt
 ```
 
-~ Ejecute el archivo .py
+~ Run the .py file
 
 ```
 py main.py
 ```
 
-## Miniatura
+## Thumbnail
 
-![miniatura](./Img/Captura%20de%20pantalla%202023-10-12%20205432.png)
+![thumbnail](./Img/Captura%20de%20pantalla%202023-10-12%20205432.png)
